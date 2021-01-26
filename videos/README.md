@@ -1,6 +1,6 @@
 
 # Prerequisite
-Install ffmpeg, drop executeable in this directory
+Install [ffmpeg](https://ffmpeg.org/download.html), drop executeable in this directory
 
 # Usage
 Drag drop video on matching bat file (e.g. mov to mp4)
