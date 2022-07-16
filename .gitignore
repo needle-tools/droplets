@@ -1,4 +1,9 @@
 *.exe
-videos/**.mp4
+[iI]mages/*.png
+[vV]ideos/**.mp4
+[vV]ideo/**.mp4
+[vV]ideos/**.gif
+[vV]ideo/**.gif
+[vV]ideo/**.mp3
 bats/*.gif
 bats/*.mp4
