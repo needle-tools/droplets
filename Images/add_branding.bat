@@ -1,6 +1,13 @@
-@REM magick -size 256x128 -define gradient:angle=45 gradient:black-white linear_gradient_east.png &
-magick input.png ( +clone -background black -shadow 90x5+0+0 ) +swap -background none -layers merge +repage output.png &
-@REM SET DIMENSION=$(identify -format %wx%h output.png) & 
-magick output.png ( -size 100x100 -define gradient:angle=45 gradient:#f80-#08f ) +swap -background none -layers merge output.png
-@REM magick convert input.png ( +clone -background black -shadow 90x8+0+0 ) +swap -background none -layers merge output.png
+@Echo OFF
+
+@REM add dropshadow to image and save to file
+magick input.png ( +clone -background black -shadow 90x9+0+0 ) +swap -background none -layers merge +repage output.png &
+@REM get resulting image with shadow dimensions and save to temporary text file
+magick identify -format "%%[width]x%%[height]" output.png > output.txt &
+@REM read back text file to variable
+SET /p size=<output.txt
+@REM remove temporary text file
+DEL /F output.txt
+@REM add background gradient and save again
+magick output.png ( -size %size% -define gradient:angle=45 gradient:#99CC33-#F3E600 ) +swap -background none -layers merge output.png
 
