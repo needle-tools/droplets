@@ -2,16 +2,19 @@
 
 :next
 if "%~1" == "" goto done
-SET result="needle-%~n1.png"
+@REM dp1 is directory with drive of current file that is being processed
+SET result="%~dp1/%~n1-needle.png"
 echo result %result%
+SET tempfile="%~dp1\needle-%~n1-temp.txt"
+echo tempfile %tempfile%
 @REM add dropshadow to image and save to file
-magick "%~1" ( +clone -background black -shadow 90x9+0+0 ) +swap -background none -layers merge +repage %result% &
+magick "%~1" ( +clone -background black -shadow 50x9+0+0 ) +swap -background none -layers merge +repage %result% &
 @REM get resulting image with shadow dimensions and save to temporary text file
-magick identify -format "%%[width]x%%[height]" "%result%" > output.txt &
+magick identify -format "%%[width]x%%[height]" "%result%" > %tempfile% &
 @REM read back text file to variable
-SET /p size=<output.txt
+SET /p size=<%tempfile%
 @REM remove temporary text file
-DEL /F output.txt
+DEL /F %tempfile%
 @REM add background gradient and save again
 magick %result% ( -size %size% -define gradient:angle=45 gradient:#99CC33-#F3E600 ) +swap -background none -layers merge %result%
 shift
