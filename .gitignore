@@ -1,5 +1,6 @@
 *.exe
 [iI]mages/*.png
+![iI]mages/logo.png
 [vV]ideos/**.mp4
 [vV]ideo/**.mp4
 [vV]ideos/**.gif
