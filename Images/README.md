@@ -6,3 +6,14 @@ then drop ``imagemagick.exe`` in this directory or install to PATH (on win)
 # Usage
 Drag drop images on matching bat files to process them
 You can even drop multiple files at once
+
+## Use with ShareX
+1) Open tasks
+2) Select the task you want to run a post processing action on
+3) Select actions
+4) Create a new action and add the path to the batch file you want to process
+5) Done
+
+![](../Documentation~/ShareX/hotkey_settings_0.png)
+![](../Documentation~/ShareX/hotkey_settings_1.png)
+![](../Documentation~/ShareX/hotkey_settings_2_action.png)
