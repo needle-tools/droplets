@@ -10,7 +10,7 @@ You can even drop multiple files at once
 1) Open tasks
 2) Select the task you want to run a post processing action on
 3) Select actions
-4) Create a new action and add the path to the batch file you want to process
+4) Create a new action and add the path to the batch file you want to process (select hidden process to not show the commandline window)
 5) Done
 
 ![](../Documentation~/ShareX/hotkey_settings_0.png)
