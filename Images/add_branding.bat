@@ -2,9 +2,9 @@
 
 :next
 if "%~1" == "" goto done
-SET input=%~1
+SET input="%~1"
 @REM dp1 is directory with drive of current file that is being processed
-SET result=%~dp1/%~n1-needle.png
+SET result="%~dp1/%~n1-needle.png"
 echo result %result%
 SET tempfile="%~dp1\needle-%~n1-temp.txt"
 echo tempfile %tempfile%
@@ -12,11 +12,11 @@ echo tempfile %tempfile%
 
 @REM make corners round
 @REM get input image size and save to temp file /variable
-magick identify -format "%%[width]x%%[height]" "%input%" > %tempfile% &
+magick identify -format "%%[width]x%%[height]" %input% > %tempfile% &
 @REM read back text file to variable
 SET /p size=<%tempfile%
 @REM save round corner command to file / variable
-magick identify -format "roundrectangle 0,0,%%[width],%%[height],8,8" "%input%" > %tempfile% &
+magick identify -format "roundrectangle 0,0,%%[width],%%[height],8,8" %input% > %tempfile% &
 @REM read back text file to variable
 SET /p clip_command=<%tempfile%
 magick -size %size% xc:none -draw "%clip_command%" png:- | magick %input% -alpha Set - -compose DstIn -composite %result%
@@ -25,7 +25,7 @@ magick -size %size% xc:none -draw "%clip_command%" png:- | magick %input% -alpha
 @REM add dropshadow to image and save to file
 magick %result% ( +clone -background black -shadow 50x9+0+0 ) +swap -background none -layers merge +repage %result% &
 @REM get resulting image with shadow dimensions and save to temporary text file
-magick identify -format "%%[width]x%%[height]" "%result%" > %tempfile% &
+magick identify -format "%%[width]x%%[height]" %result% > %tempfile% &
 @REM read back text file to variable
 SET /p size=<%tempfile%
 @REM add background gradient and save again
