@@ -29,7 +29,7 @@ magick identify -format "%%[width]x%%[height]" "%result%" > %tempfile% &
 @REM read back text file to variable
 SET /p size=<%tempfile%
 @REM add background gradient and save again
-magick %result% ( -size %size% -define gradient:angle=45 gradient:#99CC33-#F3E600 ) +swap -background none -layers merge %result%
+magick %result% ( -size %size% -define gradient:angle=45 gradient:#62D399-#D7DB0A ) +swap -background none -layers merge %result%
 
 @REM @REM make corners round
 @REM magick identify -format "roundrectangle 0,0,%%[width],%%[height],4,4" "%result%" > %tempfile% &
