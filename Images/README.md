@@ -22,4 +22,5 @@ You can even drop multiple files at once
 ![](../Documentation~/ShareX/hotkey_settings_0.png)
 ![](../Documentation~/ShareX/hotkey_settings_1.png)
 ![](../Documentation~/ShareX/hotkey_settings_2_action.png)
-![2022-07-19-211324_ShareX_-_Aufgabeneinstellungen_für_Bereich_aufnehm](https://user-images.githubusercontent.com/5083203/179830582-82de3eb8-c304-4fd8-98ea-2ab2afe286f2.png)
+
+![2022-07-19-211321_dropletsREADME md_at_master_·_needle-toolsdroplets](https://user-images.githubusercontent.com/5083203/179830724-727a5a45-46a2-4430-a209-f9fd67949669.png)
