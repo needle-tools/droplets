@@ -17,7 +17,7 @@ You can even drop multiple files at once
 3) Select actions
 4) Create a new action and add the path to the batch file you want to process (select hidden process to not show the commandline window)
 5) Enable ``Run Action`` in the ``Task`` section 
-6) Done
+6) Done — **BUT** — *if you just installed imagemagick you might need to restart windows too* 😒 
 
 ![](../Documentation~/ShareX/hotkey_settings_0.png)
 ![](../Documentation~/ShareX/hotkey_settings_1.png)
