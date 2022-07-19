@@ -16,8 +16,11 @@ You can even drop multiple files at once
 2) Select the task you want to run a post processing action on
 3) Select actions
 4) Create a new action and add the path to the batch file you want to process (select hidden process to not show the commandline window)
-5) Done
+5) Enable ``Run Action`` in the ``Task`` section 
+6) Done
 
 ![](../Documentation~/ShareX/hotkey_settings_0.png)
 ![](../Documentation~/ShareX/hotkey_settings_1.png)
 ![](../Documentation~/ShareX/hotkey_settings_2_action.png)
+
+![2022-07-19-211321_dropletsREADME md_at_master_·_needle-toolsdroplets](https://user-images.githubusercontent.com/5083203/179830724-727a5a45-46a2-4430-a209-f9fd67949669.png)
