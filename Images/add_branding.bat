@@ -4,6 +4,7 @@
 :next
 if "%~1" == "" goto done
 SET input="%~1"
+echo input %input%
 @REM dp1 is directory with drive of current file that is being processed
 SET result="%~dp1/%~n1-needle.png"
 echo result %result%
