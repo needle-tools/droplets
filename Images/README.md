@@ -11,7 +11,7 @@ Install [imagemagick](https://imagemagick.org/script/download.php), make sure to
 Drag drop images on matching bat files to process them
 You can even drop multiple files at once
 
-## Use with ShareX 📷
+## Use with ShareX 📷🌈
 1) Open tasks
 2) Select the task you want to run a post processing action on
 3) Select actions
