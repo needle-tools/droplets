@@ -16,8 +16,10 @@ You can even drop multiple files at once
 2) Select the task you want to run a post processing action on
 3) Select actions
 4) Create a new action and add the path to the batch file you want to process (select hidden process to not show the commandline window)
-5) Done
+5) Enable ``Run Action`` in the ``Task`` section 
+6) Done
 
 ![](../Documentation~/ShareX/hotkey_settings_0.png)
 ![](../Documentation~/ShareX/hotkey_settings_1.png)
 ![](../Documentation~/ShareX/hotkey_settings_2_action.png)
+![2022-07-19-211324_ShareX_-_Aufgabeneinstellungen_für_Bereich_aufnehm](https://user-images.githubusercontent.com/5083203/179830582-82de3eb8-c304-4fd8-98ea-2ab2afe286f2.png)
