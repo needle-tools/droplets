@@ -44,7 +44,7 @@ magick %result% ( -size %size% -define gradient:angle=45 gradient:#62D399-#D7DB0
 @REM magick -size %size% xc:none -draw "%clip_command%" %extension%:- | magick %result% -alpha Set - -compose DstIn -composite %result%
 
 @REM add logo
-magick %result% ( logo.png -thumbnail x14 -alpha set -channel A -evaluate multiply 0.4 ) -gravity SouthEast -geometry  +5+3 -composite %result%
+@REM magick %result% ( %~dp0logo.png -thumbnail x14 -alpha set -channel A -evaluate multiply 0.4 ) -gravity SouthEast -geometry  +5+3 -composite %result%
 
 @REM copy to clipboard
 magick  %result% clipboard:
@@ -53,7 +53,7 @@ DEL /F %tempfile%
 shift
 goto next
 :done
-timeout 20
+@REM timeout 20
 exit
 
 
