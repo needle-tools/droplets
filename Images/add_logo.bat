@@ -9,6 +9,14 @@ IF NOT EXIST %logo_path% (
     pause
 )
 
+REM check if any file was added
+if "%~1" == "" (
+    echo Please drop an image file or invoke with the path to an image
+    echo You can also add this as a post screenshot action to ShareX.
+    echo See https://github.com/needle-tools/droplets/tree/master/Images for instructions
+    pause
+)
+
 :next
 if "%~1" == "" goto done
 SET input="%~1"
