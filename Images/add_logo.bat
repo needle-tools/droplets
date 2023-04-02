@@ -39,7 +39,7 @@ magick -size %size% xc:none -draw "%clip_command%" %extension%:- | magick %input
 
 
 @REM add logo
-magick %result% ( %logo_path% -thumbnail x50 -alpha set -channel A -evaluate multiply 1.0 ) -gravity SouthEast -geometry  +14+7 -composite %result%
+magick %result% ( %logo_path% -thumbnail x20 -alpha set -channel A -evaluate multiply 1.0 ) -gravity SouthEast -geometry  +14+7 -composite %result%
 
 @REM copy to clipboard
 magick  %result% clipboard:
