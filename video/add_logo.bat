@@ -19,6 +19,7 @@ SET file_ext = %~x1
 REM add logo and we need to copy to a temp target because of access rights
 ffmpeg -i "%~1" -i %logo_path% -filter_complex "[1:v]scale=%logo_size%:-1 [ovrl], [0:v][ovrl] overlay=W-w-15:H-h-10:enable='between(t,%start_time%,%end_time%)'" -c:a copy "%temp%\%filename_without_path%-logo.mp4"
 REM copy to original location
+echo Copying "%temp%\%filename_without_path%-logo.mp4" to "%~dp1%~n1-logo.mp4"
 copy "%temp%\%filename_without_path%-logo.mp4" "%~dp1%~n1-logo.mp4"
 REM output the new path for other apps to use
 echo "%~dp1%~n1%file_ext%"
