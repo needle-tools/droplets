@@ -1,7 +1,7 @@
 @echo off
 
 SET logo_path=%~dp0logo.png
-SET logo_size=25
+SET logo_size=40
 SET start_time=0
 SET end_time=99999
 SET temp=%~dp0temp
