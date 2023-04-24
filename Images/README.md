@@ -28,7 +28,8 @@ You can even drop multiple files at once
 ![](../Documentation~/ShareX/hotkey_settings_1.png)
 ![](../Documentation~/ShareX/hotkey_settings_2_action.png)
 
-With video branding:
+With video branding:  
+
 ![image](https://user-images.githubusercontent.com/2693840/234128422-11343689-6ba7-4103-9670-96e91b9405c0.png)
 
 
