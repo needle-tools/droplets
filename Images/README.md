@@ -1,8 +1,12 @@
 
 # Scripts
-- ``add_branding.bat`` does add needle color gradient to images:  
+- ``Images/add_branding.bat`` does add needle color gradient to images:  
 
 ![before_after](https://user-images.githubusercontent.com/5083203/179529780-05531784-14c1-433c-a4b2-fd2e5304e68b.png)
+
+- ``video/add_logo.bat`` adds the Logo to mp4 files:
+
+https://user-images.githubusercontent.com/2693840/234128837-eeecbcef-f327-458e-ace0-cb6a5ddbb945.mp4
 
 # Prerequisite
 Install [imagemagick](https://imagemagick.org/script/download.php), make sure to install to ``PATH``
