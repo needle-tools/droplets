@@ -24,4 +24,8 @@ You can even drop multiple files at once
 ![](../Documentation~/ShareX/hotkey_settings_1.png)
 ![](../Documentation~/ShareX/hotkey_settings_2_action.png)
 
+With video branding:
+![image](https://user-images.githubusercontent.com/2693840/234128422-11343689-6ba7-4103-9670-96e91b9405c0.png)
+
+
 ![2022-07-19-211321_dropletsREADME md_at_master_·_needle-toolsdroplets](https://user-images.githubusercontent.com/5083203/179830724-727a5a45-46a2-4430-a209-f9fd67949669.png)
