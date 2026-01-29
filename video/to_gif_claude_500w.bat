@@ -5,14 +5,6 @@ SET maxdur=5
 SET ffmpeg="%~dp0ffmpeg.exe"
 SET ffprobe="%~dp0ffprobe.exe"
 
-REM Prompt for target width (only once at the start)
-if not defined width (
-    set /p width="Enter target width (e.g., 500): "
-    if "!width!" == "" set width=500
-    echo Using width: !width!px
-    echo.
-)
-
 :next
 if "%~1" == "" goto done
 
@@ -29,10 +21,10 @@ echo Duration: !dur! seconds
 REM Compare and run appropriate command
 if !dur! GTR !maxdur! (
     echo Speeding up: !dur!s to !maxdur!s
-    %ffmpeg% -i "%~1" -filter_complex "setpts=PTS*!maxdur!/!dur!,fps=14,scale=!width!:-1:flags=lanczos,split[s0][s1];[s0]palettegen=max_colors=256:stats_mode=full[p];[s1][p]paletteuse=dither=floyd_steinberg" -y "%~n1_!width!.gif"
+    %ffmpeg% -i "%~1" -filter_complex "setpts=PTS*!maxdur!/!dur!,fps=14,scale=500:-1:flags=lanczos,split[s0][s1];[s0]palettegen=max_colors=256:stats_mode=full[p];[s1][p]paletteuse=dither=floyd_steinberg" -y "%~n1_500.gif"
 ) else (
     echo No speedup needed
-    %ffmpeg% -i "%~1" -filter_complex "fps=14,scale=!width!:-1:flags=lanczos,split[s0][s1];[s0]palettegen=max_colors=256:stats_mode=full[p];[s1][p]paletteuse=dither=floyd_steinberg" -y "%~n1_!width!.gif"
+    %ffmpeg% -i "%~1" -filter_complex "fps=14,scale=500:-1:flags=lanczos,split[s0][s1];[s0]palettegen=max_colors=256:stats_mode=full[p];[s1][p]paletteuse=dither=floyd_steinberg" -y "%~n1_500.gif"
 )
 
 shift
